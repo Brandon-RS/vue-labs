@@ -12,9 +12,23 @@ const repos = 'https://github.com/Brandon-RS?tab=repositories'
       <h1>Hey, I'm {{ name }}!</h1>
       <h2>Welcome to my digital place. 🏡</h2>
       <p>
-        I'm Systems Engineer and software developer from Perú. I like to build <a :href="repos"
-          target="_blank">mobile</a>, <a :href="repos" target="_blank">web</a>, and <a :href="repos"
-          target="_blank">desktop</a> applications, and my favorite framework is Flutter.
+        Full-stack developer who loves building things with
+        <a href="https://flutter.dev/" target="_blank">Flutter!</a> 🚀
+      </p>
+
+      <p>
+        I've been creating
+        <a :href="repos" target="_blank">mobile</a>,
+        <a :href="repos" target="_blank">web</a>, and
+        <a :href="repos" target="_blank">desktop</a>
+        apps since 2023, but I've been dabbling in software development since my university days a
+        few years before that.
+      </p>
+
+      <p>
+        I'm always excited to learn about the latest tech and make sure my
+        applications are fast and scalable. I'm happy to work as part of a team or
+        independently, and I'm always looking for opportunities to learn and grow.
       </p>
     </div>
     <div class="banner-image">

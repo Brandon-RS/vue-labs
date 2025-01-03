@@ -20,11 +20,10 @@ const skills = computed(() => skillStore.getAllSkills)
   <div class="main-home">
     <HomeBanner name="Brandon" />
     <HomeProjects :projects="projects" />
+    <br>
     <HomeSkills :skills="skills" />
     <HomeContact />
   </div>
 </template>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

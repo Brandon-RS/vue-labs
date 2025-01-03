@@ -1,7 +1,7 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import emailjs from '@emailjs/browser'
 import ModalContact from '@/components/Contact/ModalContact.vue'
+import emailjs from '@emailjs/browser'
+import { ref } from 'vue'
 
 const form = ref('')
 const inputReset = ref('')
@@ -12,10 +12,10 @@ const isOpen = ref(false)
 const sendEmail = () => {
   sending.value = true
   emailjs.sendForm(
-    'service_150dlvm',
-    'template_s5iha1s',
+    import.meta.env.VITE_EMAIL_SERVICE,
+    import.meta.env.VITE_EMAIL_TEMPLATE,
     form.value,
-    'n5A7QePYCgc74Qul3'
+    import.meta.env.VITE_EMAIL_PUBLIC_KEY,
   )
     .then(() => {
       inputReset.value = ''
@@ -26,7 +26,7 @@ const sendEmail = () => {
 }
 
 </script>
-            
+
 <template>
   <div class="contact-container">
 
@@ -46,7 +46,7 @@ const sendEmail = () => {
           </div>
           <div class="info-item">
             <i class="fa-solid fa-envelope"></i>
-            <span>brandon.rsantillan@gmail.com</span>
+            <span>brandon.rsantillan@proton.me</span>
           </div>
           <div class="info-item">
             <i class="fa-solid fa-briefcase"></i>

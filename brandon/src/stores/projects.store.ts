@@ -12,11 +12,11 @@ export const useProjectStore = defineStore("projects", {
     projects: [
       {
         id: "1",
-        name: "brandon.rojas.pub",
+        name: "brandon-pub",
         year: "2021",
         desc: "Personal portfolio. *This website",
         tags: ["Vue", "Pinia", "Router"],
-        link: `${projectBaseUrl}brandon.rojas.pub`,
+        link: `${projectBaseUrl}vue-lab/tree/main/brandon`,
       },
       {
         id: "2",

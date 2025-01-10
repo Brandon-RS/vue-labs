@@ -1,4 +1,4 @@
-# Vue monorepo
+# Vue lab
 
 A place to host some vue apps.
 

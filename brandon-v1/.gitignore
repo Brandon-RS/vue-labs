@@ -6,16 +6,15 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+yarn.lock
 
 node_modules
 .DS_Store
+.vscode
 dist
 dist-ssr
 coverage
 *.local
-
-/cypress/videos/
-/cypress/screenshots/
 
 # Editor directories and files
 .vscode/*
@@ -27,4 +26,6 @@ coverage
 *.sln
 *.sw?
 
-*.tsbuildinfo
+# Local Netlify folder
+.netlify
+.env

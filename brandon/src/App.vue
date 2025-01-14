@@ -1,64 +1,85 @@
-<script lang="ts" setup>
-import { defineAsyncComponent } from 'vue'
-
-const NavbarComponent = defineAsyncComponent(() => import('./components/NavbarComponent.vue'))
-const LogoComponent = defineAsyncComponent(() => import('./components/LogoComponent.vue'))
-const HomeFooter = defineAsyncComponent(() => import('./components/FooterComponent.vue'))
+<script setup lang="ts">
+import { RouterLink, RouterView } from 'vue-router'
+import HelloWorld from './components/HelloWorld.vue'
 </script>
 
 <template>
-  <div class="main">
-    <div class="app-container">
-      <div class="header">
-        <div class="header-nav">
-          <LogoComponent />
-          <NavbarComponent />
-        </div>
-        <span class="theme-button">
-          <i class="fa-solid fa-moon"></i>
-        </span>
-      </div>
+  <header>
+    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
 
-      <div class="main-container">
-        <RouterView />
-        <HomeFooter />
-      </div>
+    <div class="wrapper">
+      <HelloWorld msg="You did it!" />
+
+      <nav>
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/about">About</RouterLink>
+      </nav>
     </div>
-  </div>
+  </header>
+
+  <RouterView />
 </template>
 
-<style lang="scss">
-@import './assets/styles/index';
-@import './assets/styles/sizes';
-
-.header {
-  margin: 30px 0 80px 0;
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-  max-width: $custom-max-width;
-
-  .theme-button {
-    color: rgb(255, 221, 0);
-    background-color: #252525;
-    display: inline-block;
-    width: 35px;
-    height: 35px;
-    border-radius: 50px;
-    font-size: 18px;
-    text-align: center;
-    line-height: 35px;
-    cursor: pointer;
-  }
+<style scoped>
+header {
+  line-height: 1.5;
+  max-height: 100vh;
 }
 
-@media screen and (max-width: 600px) {
-  .header {
-    .theme-button {
-      position: absolute;
-      right: calc(100vw / 2.2);
-      top: 10px;
-    }
+.logo {
+  display: block;
+  margin: 0 auto 2rem;
+}
+
+nav {
+  width: 100%;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+nav a.router-link-exact-active {
+  color: var(--color-text);
+}
+
+nav a.router-link-exact-active:hover {
+  background-color: transparent;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0 1rem;
+  border-left: 1px solid var(--color-border);
+}
+
+nav a:first-of-type {
+  border: 0;
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    place-items: center;
+    padding-right: calc(var(--section-gap) / 2);
+  }
+
+  .logo {
+    margin: 0 2rem 0 0;
+  }
+
+  header .wrapper {
+    display: flex;
+    place-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    text-align: left;
+    margin-left: -1rem;
+    font-size: 1rem;
+
+    padding: 1rem 0;
+    margin-top: 1rem;
   }
 }
 </style>

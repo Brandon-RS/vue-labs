@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-primary text-slate-300;
+  @apply font-sans;
+}
+
+.app-wrapper {
+  @apply min-h-screen max-w-7xl mx-auto;
+  @apply p-6 md:p-10;
+}

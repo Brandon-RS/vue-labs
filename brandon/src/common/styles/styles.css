@@ -3,11 +3,15 @@
 @tailwind utilities;
 
 body {
-  @apply bg-primary text-slate-300;
+  @apply bg-slate-50 dark:bg-primary text-zinc-900 dark:text-gray-300;
   @apply font-sans;
 }
 
 .app-wrapper {
   @apply min-h-screen max-w-7xl mx-auto;
   @apply p-6 md:p-10;
+}
+
+.link {
+  @apply hover:underline dark:text-amber-400 text-green-600;
 }

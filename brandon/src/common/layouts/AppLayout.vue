@@ -1,13 +1,16 @@
 <script setup lang="ts">
-import NavBar from '@/common/components/NavBar.vue'
+import AppFooter from '@/common/components/AppFooter.vue'; /* PartiallyEnd: #3632/scriptSetup.vue */
+import AppNavbar from '@/common/components/AppNavbar.vue';
 </script>
 
 <template>
-  <nav-bar />
+  <app-navbar />
 
-  <main class="pt-4">
+  <main class="pt-4 pb-10 md:pb-14">
     <router-view />
   </main>
+
+  <app-footer />
 </template>
 
 <style scoped></style>

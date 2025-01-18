@@ -32,7 +32,7 @@ const date = new Date();
       <span>
         <a
           class="footer__link"
-          href="https://api.whatsapp.com/send?phone=51970092350&text=Hi Brandon, I'm looking for a developer."
+          href="https://api.whatsapp.com/send?phone=51970092350&text=Hi Brandom,"
           target="_blank"
           rel="noreferrer">
           WhatsApp <i class="fa-brands fa-whatsapp"></i>

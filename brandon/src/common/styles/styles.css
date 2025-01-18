@@ -13,5 +13,5 @@ body {
 }
 
 .link {
-  @apply hover:underline dark:text-amber-400 text-green-600;
+  @apply hover:underline dark:text-amber-400 text-green-500;
 }

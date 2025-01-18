@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import BannerHome from '@/features/home/components/BannerHome.vue';
-import ContactHome from '@/features/home/components/ContactHome.vue';
-import ProjectsHome from '@/features/home/components/ProjectsHome.vue';
+import HomeBanner from '@/features/home/components/HomeBanner.vue';
+import HomeContact from '@/features/home/components/HomeContact.vue';
+import HomeProjects from '@/features/home/components/HomeProjects.vue';
 </script>
 
 <template>
   <section class="pt-5 md:pt-20">
-    <banner-home name="Brandom" />
+    <home-banner name="Brandom" />
 
-    <contact-home />
+    <home-contact />
 
-    <projects-home />
+    <home-projects />
   </section>
 </template>
 

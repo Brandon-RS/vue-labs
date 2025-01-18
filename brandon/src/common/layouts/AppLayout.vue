@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import AppFooter from '@/common/components/AppFooter.vue'; /* PartiallyEnd: #3632/scriptSetup.vue */
+import AppFooter from '@/common/components/AppFooter.vue';
 import AppNavbar from '@/common/components/AppNavbar.vue';
 </script>
 

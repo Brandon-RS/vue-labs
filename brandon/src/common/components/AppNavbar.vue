@@ -23,7 +23,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <header class="flex justify-between items-end">
+  <header class="flex flex-col md:flex-row justify-between items-center md:items-end">
     <div>
       <router-link
         exact-active-class="font-semibold"

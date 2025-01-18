@@ -8,7 +8,7 @@ const date = new Date();
   <footer>
     <hr class="border-gray-700 border-2 rounded-full" />
 
-    <div class="flex justify-center items-center py-4 gap-5">
+    <div class="flex justify-center items-center py-6 gap-5">
       <span>
         <a
           class="footer__link"
@@ -40,7 +40,7 @@ const date = new Date();
       </span>
     </div>
 
-    <span class="block text-center py-4 text-sm text-gray-500">
+    <span class="block text-center text-sm text-gray-500">
       &copy; {{ date.getUTCFullYear() }} Brandom Rojas
     </span>
   </footer>

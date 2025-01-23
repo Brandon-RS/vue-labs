@@ -27,9 +27,21 @@ const router = createRouter({
           component: () => import('@contact/views/ContactView.vue'),
         },
         {
-          name: 'projects',
+          name: 'projects-layout',
           path: 'projects',
-          component: () => import('@projects/views/ProjectsView.vue'),
+          component: () => import('@projects/layouts/ProjectsLayout.vue'),
+          children: [
+            {
+              name: 'projects',
+              path: '',
+              component: () => import('@projects/views/ProjectsView.vue'),
+            },
+            {
+              name: 'projects-details',
+              path: ':id',
+              component: () => import('@projects/views/ProjectDetailsView.vue'),
+            },
+          ],
         },
       ],
     },

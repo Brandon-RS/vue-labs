@@ -5,10 +5,17 @@ defineProps<{
   description: string;
 }>();
 
+const emit = defineEmits<{
+  (e: 'onTap'): void;
+}>();
+
+const onClick = () => emit('onTap');
+
 </script>
 
 <template>
-  <div class="bg-gray-200 dark:bg-slate-800 rounded-xl p-5">
+  <div class="bg-gray-200 dark:bg-slate-800 rounded-xl p-5 cursor-pointer"
+    @click="onClick">
     <h4 class="text-lg text-zinc-700 dark:text-zinc-200 font-semibold">
       {{ title }}
     </h4>

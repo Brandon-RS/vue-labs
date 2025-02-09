@@ -4,10 +4,20 @@ import { onMounted } from 'vue';
 import LoadingSpinner from '@common/components/LoadingSpinner.vue';
 import SimpleCard from '@common/components/SimpleCard.vue';
 import { useHomeProjectsStore } from '@home/stores/useHomeProjectsStore';
+import { useRouter } from 'vue-router';
 
+const router = useRouter();
 const projectsStore = useHomeProjectsStore();
 
 onMounted(() => projectsStore.fetchProjects());
+
+const goToDetails = (id: string) => {
+  router.push({
+    name: 'project-details',
+    params: { id },
+  });
+}
+
 </script>
 
 <template>
@@ -29,7 +39,8 @@ onMounted(() => projectsStore.fetchProjects());
         v-for="project in projectsStore.projects"
         :key="project.id"
         :title="project.name"
-        :description="project.headline" />
+        :description="project.headline"
+        @on-tap="goToDetails(project.id)" />
 
     </div>
   </div>

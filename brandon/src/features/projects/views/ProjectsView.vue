@@ -1,7 +1,8 @@
 <script setup lang="ts">
-import SimpleCard from '@common/components/SimpleCard.vue';
-import { useProjectsStore } from '@projects/stores/projects.store';
 import { useRouter } from 'vue-router';
+
+import ProjectCard from '@projects/components/ProjectCard.vue';
+import { useProjectsStore } from '@projects/stores/projects.store';
 
 const router = useRouter();
 const { projects } = useProjectsStore();
@@ -20,9 +21,8 @@ const goToDetails = (id: string) => {
   <div class="max-w-3xl p-4">
     <ul class="space-y-2">
       <li v-for="project in projects" :key="project.id">
-        <simple-card
-          :title="project.name"
-          :description="project.headline"
+        <ProjectCard
+          :project="project"
           @on-tap="goToDetails(project.id)" />
       </li>
     </ul>

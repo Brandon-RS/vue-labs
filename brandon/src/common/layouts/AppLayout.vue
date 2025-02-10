@@ -7,7 +7,11 @@ import AppNavbar from '@/common/components/AppNavbar.vue';
   <app-navbar />
 
   <main class="pt-4 pb-10 md:pb-14">
-    <router-view />
+    <router-view v-slot="{ Component }">
+      <keep-alive>
+        <component :is="Component" />
+      </keep-alive>
+    </router-view>
   </main>
 
   <app-footer />

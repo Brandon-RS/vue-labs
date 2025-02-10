@@ -1,6 +1,7 @@
 export interface ProjectTag {
   id: string
   name: string
+  link?: string
 }
 
 export interface Project {

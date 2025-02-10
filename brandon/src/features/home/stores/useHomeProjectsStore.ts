@@ -24,7 +24,7 @@ export const useHomeProjectsStore = defineStore('home-projects', () => {
         link: 'https://example.com',
         order: 1,
         tags: [
-          { id: '1', name: 'Tag 1' },
+          { id: '1', name: 'Tag 1', link: 'https://example.com' },
           { id: '2', name: 'Tag 2' },
         ],
       },

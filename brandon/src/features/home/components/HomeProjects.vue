@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
+import { useRouter } from 'vue-router';
 
 import LoadingSpinner from '@common/components/LoadingSpinner.vue';
-import SimpleCard from '@common/components/SimpleCard.vue';
 import { useHomeProjectsStore } from '@home/stores/useHomeProjectsStore';
-import { useRouter } from 'vue-router';
+import ProjectCard from '@projects/components/ProjectCard.vue';
 
 const router = useRouter();
 const projectsStore = useHomeProjectsStore();
@@ -28,18 +28,17 @@ const goToDetails = (id: string) => {
 
     <div class="min-h-44 flex justify-center items-center"
       v-if="projectsStore.isLoading">
-      <loading-spinner />
+      <LoadingSpinner />
     </div>
 
     <div
       class="pt-5 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3"
       v-else>
 
-      <simple-card
+      <ProjectCard
         v-for="project in projectsStore.projects"
         :key="project.id"
-        :title="project.name"
-        :description="project.headline"
+        :project="project"
         @on-tap="goToDetails(project.id)" />
 
     </div>

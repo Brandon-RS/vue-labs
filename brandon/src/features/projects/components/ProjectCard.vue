@@ -12,7 +12,7 @@ const onClick = () => emit('onTap');
 <template>
   <div
     class="bg-gray-200 dark:bg-slate-800 rounded-xl p-5 cursor-pointer hover:bg-gray-300 dark:hover:bg-slate-700"
-    @click.self="onClick">
+    @click="onClick">
     <h4 class="text-lg text-zinc-700 dark:text-zinc-200 font-semibold">
       {{ project.name }}
     </h4>
@@ -25,12 +25,13 @@ const onClick = () => emit('onTap');
       <a
         v-for="tag in project.tags"
         :key="tag.id"
-        :href="project.link"
+        :href="tag.link"
+        @click.stop
         target="_blank"
         rel="noreferrer">
         <span
           class="px-2 py-1 text-sm rounded bg-gray-300 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-800">
-          # {{ tag.name }}
+          # {{ tag.tag }}
         </span>
       </a>
     </div>

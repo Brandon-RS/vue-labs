@@ -1,14 +1,19 @@
 export interface ProjectTag {
   id: string
-  name: string
-  link?: string
+  tag: string
+  link: string
+}
+
+export interface ProjectContent {
+  id: string
+  body: string
 }
 
 export interface Project {
   id: string
   name: string
   headline: string
-  description: string
+  content?: ProjectContent
   link: string
   order: number
   tags: ProjectTag[]

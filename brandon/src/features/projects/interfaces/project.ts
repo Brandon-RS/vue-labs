@@ -16,5 +16,6 @@ export interface Project {
   content?: ProjectContent
   link: string
   order: number
+  home: boolean
   tags: ProjectTag[]
 }

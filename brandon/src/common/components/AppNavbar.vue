@@ -27,7 +27,7 @@ onMounted(() => {
     <div>
       <router-link
         exact-active-class="font-semibold"
-        class="flex items-end pb-2 text-xl"
+        class="flex items-end pb-2 text-xl hover:text-green-600 dark:hover:text-amber-400"
         :to="{ name: 'home' }">
         <img
           class="h-10 me-4"

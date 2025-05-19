@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { useRouter } from 'vue-router';
 
-import ProjectCard from '@projects/components/ProjectCard.vue';
+import ProjectItem from '@projects/components/ProjectItem.vue';
 import { useProjectsStore } from '@projects/stores/projects.store';
 
 const router = useRouter();
@@ -18,10 +18,14 @@ const goToDetails = (id: string) => {
 
 <template>
 
-  <div class="max-w-3xl p-4">
+  <div class="max-w-5xl p-4">
+    <h1 class="text-2xl font-bold mb-4">Projects</h1>
+
+    <p class="text-gray-500 mb-4">Here are some of the projects I have worked on.</p>
+
     <ul class="space-y-2">
       <li v-for="project in projects" :key="project.id">
-        <ProjectCard
+        <ProjectItem
           :project="project"
           @on-tap="goToDetails(project.id)" />
       </li>
